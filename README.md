@@ -22,10 +22,17 @@ It combines a simple syntax and native system integration to deliver a fast, rel
    ```
    sudo mv ~/Downloads/rayshell /usr/bin/
    ```
-3. Open your terminal and type `rayshell -v` and ensure it's working.
+
+3. Add execute permission to the file. 
+   ```
+   sudo chmod +x /usr/bin/rayshell
+   ```
+4. Open your terminal and type `rayshell -v` and ensure it's working.
+5. Run the repl by just typing `rayshell` in the terminal.
 
 ## Syntax
 ### All unix commands will work fine. 
+
 ### If block
    ```
     if (ls something | grep something) -> {
