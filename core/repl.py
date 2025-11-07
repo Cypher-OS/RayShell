@@ -4,6 +4,7 @@ from core.executor import Executor
 from core.ast import saveASTtoJson
 import os, readline, signal, sys
 from core.expander import Expander
+import argparse
 
 HISTORYFILE = os.path.expanduser("~/.rayshell_history")
 
@@ -40,9 +41,16 @@ def runScript(file_path: str):
 def repl(cmd: str = None):
 
     loadHistory()
+    VERSION = "rayshell v1.0.0"
 
-    if len(sys.argv) > 1 and sys.argv[1] == "-c":
-        runOnce(" ".join(sys.argv[2:]))
+    parser = argparse.ArgumentParser(description="A custom shell environment.")
+    parser.add_argument('-c', type=str, nargs='*', help='Execute a command string.')
+    parser.add_argument('-v', '--version', action='version', version=VERSION,
+                        help='Display the version and exit.')
+    args = parser.parse_args(sys.argv[1:])
+
+    if args.c:
+        runOnce(" ".join(args.c))
     else:
         while True:
             try:

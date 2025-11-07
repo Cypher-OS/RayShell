@@ -5,10 +5,6 @@ BUILTINS = {
     "cd", "pwd", "echo", "jump", "cwd", "disp", "print", "hi","jobs", "fg","bg","history"  
 }
 
-BTRFS_PARTITION = "/dev/vda1"
-HOME_SUBVOL = "/home"
-SNAPSHOT_MOUNT = "/mnt/tenet"
-
 class BuiltinFns:
     def __init__(self, cmd, args, ex):
         self.cmd = cmd

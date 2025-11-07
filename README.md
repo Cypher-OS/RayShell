@@ -1,38 +1,52 @@
 Rayshell — Command Execution and Scripting Language
 =
 
+Rayshell is a shell scripting language built for command execution, and system scripting.<br>
+It combines a simple syntax and native system integration to deliver a fast, reliable scripting environment.
+
+## Features
+ - Basic command execution
+ - Pipelines
+ - Redirections
+ - Basic job control
+ - Basic Signal handling
+ - Control statements (if and while)
+ - Builtins (hi, history, cd, jump, echo, print, jobs, fg, bg)
+ - Script files execution
+
+## Installation
+
+1. Download the given executable.
+2. 2. Move them to a location like `/usr/bin`. If you've downloaded the file to Downloads, run the command
+
+   ```
+   sudo mv ~/Downloads/rayshell /usr/bin/
+   ```
+3. Open your terminal and type `rayshell` and ensure it's working.
+
+## Syntax
+### All unix commands will work fine. 
+### If block
+    ```
+    if (ls something | grep something) -> {
+        print done
+    }
+    elif (false) -> {
+        print not done
+    }
+    else {
+        print hahaa
+    }
+    ls -l
+    ```
+
+### While loop
+    ```
+    while (ls | grep core) -> {
+        print looping.
+    }
+    ```
+
 <img width="2880" height="1800" alt="screenshot-20251016-192340" src="https://github.com/user-attachments/assets/dd3bed40-91a0-4bf5-b3be-6b1ba22eaf53" />
 
 
-Rayshell is a shell scripting language built for command execution, and system scripting.<br>
-It combines a clean syntax, strong control flow, and native system integration to deliver a fast, reliable scripting environment.
-
-Key Features<br>
-1. Command Execution<br>
-
-Rayshell is designed for executing system commands efficiently.<br>
-It provides intuitive syntax for launching and managing processes, handling I/O redirection, and chaining commands.<br>
-Supports background execution, piping, and parallel task execution out of the box.<br>
-
-2. Scripting Language<br>
-
-Beyond simple command execution, Rayshell includes full scripting capabilities.<br>
-Features include conditionals, loops, functions, and variables — enabling complex automation scripts with minimal syntax overhead.<br>
-Script files are portable and can be executed directly via the Rayshell interpreter.<br>
-
-3. System Integration<br>
-
-Rayshell is tightly integrated with the underlying operating system.<br>
-Provides direct access to environment variables, system utilities, and process control interfaces.<br>
-Ideal for writing administrative tools, build scripts, and lightweight service controllers.<br>
-
-4. Minimalism and Performance<br>
-
-Engineered for simplicity and speed.<br>
-Minimal startup time, low memory usage, and near-zero overhead for command execution.<br>
-Perfect for embedded systems, automation frameworks, or environments where performance and reliability matter.<br>
-
-5. Extensibility<br>
-
-Rayshell supports modular extensions and custom command definitions.<br>
-Developers can easily extend built-in functionality without sacrificing minimalism or execution speed.<br>
