@@ -27,7 +27,7 @@ It combines a simple syntax and native system integration to deliver a fast, rel
 ## Syntax
 ### All unix commands will work fine. 
 ### If block
-    ```
+   ```
     if (ls something | grep something) -> {
         print done
     }
@@ -38,14 +38,14 @@ It combines a simple syntax and native system integration to deliver a fast, rel
         print hahaa
     }
     ls -l
-    ```
-
+   ```
+   This syntax is for script files. Type this in the same when you're running it in a terminal.
 ### While loop
-    ```
+   ```
     while (ls | grep core) -> {
         print looping.
     }
-    ```
+   ```
 
 <img width="2880" height="1800" alt="screenshot-20251016-192340" src="https://github.com/user-attachments/assets/dd3bed40-91a0-4bf5-b3be-6b1ba22eaf53" />
 
